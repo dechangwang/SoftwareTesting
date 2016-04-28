@@ -19,7 +19,12 @@ public class RealCharge {
 
     //计算折扣后的实际通话费用
     private void calculateCost() {
+        if(num< 0 || callMinutes <0){
+            cost = -1;
+            return;
+        }
         int minutes = (int) Math.ceil(callMinutes);
+
 
         cost = minutes * costPerMinute;  //折扣之前的通话费用
         if (minutes <= 60) {

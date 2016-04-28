@@ -1,5 +1,7 @@
 package cn.edu.tongji;
 
+import cn.edu.tongji.PayClient.Client;
+
 import java.util.Scanner;
 
 /**
@@ -23,8 +25,16 @@ public class Main {
             double realCost = realCharge.getCost();
             TotalCharge totalCharge = new TotalCharge(unpaymentLastYear, realCost);
             double totalCost = totalCharge.getTotalCost();
-
             System.out.println("总的通话费用为：" + totalCost);
+
+            System.out.print("是否充值：Y/N ");
+            Scanner input = new Scanner(System.in);
+            String str = input.nextLine();
+             if(str.equals("Y")){
+                Client.start(totalCost);
+
+            }
+
         }
 
     }

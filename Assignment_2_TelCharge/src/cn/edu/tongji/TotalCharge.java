@@ -17,6 +17,9 @@ public class TotalCharge {
         this.realCost = realCost;
     }
     public double getTotalCost() {
+        if(unpaymentLastYear < 0 || realCost < 0){
+            return -1;
+        }
         totalCost = basicCost + realCost + unpaymentLastYear *0.05;
         totalCost = Double.parseDouble(String.format("%.2f", totalCost));
         return totalCost;

@@ -17,7 +17,7 @@ import java.util.List;
  * Created by wangdechang on 2016/4/28.
  */
 public class TelChargeTest extends TestCase {
-    private static final int SIZE = 8;
+    private static final int SIZE =38;
     private Workbook book;
     RealCharge realCharge;
     TotalCharge totalCharge;
